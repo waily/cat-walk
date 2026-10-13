@@ -1,0 +1,98 @@
+{
+  "name": "cat-walk",
+  "version": "1.0.0",
+  "description": "A text cat walks, sleeps and gets dizzy above the prompt while you wait, and beeps when the AI's reply is done.",
+  "author": {
+    "name": "Waily Yang"
+  },
+  "homepage": "https://github.com/waily/cat-walk",
+  "repository": "https://github.com/waily/cat-walk",
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "idleSeconds": {
+      "type": "string",
+      "title": "Idle seconds before the cat comes out",
+      "description": "Seconds without typing before the cat walks out by itself. off = only on the button, /cat or when a prompt is sent.",
+      "default": "30",
+      "options": [
+        "off",
+        "3",
+        "5",
+        "10",
+        "15",
+        "30",
+        "60",
+        "120",
+        "300"
+      ]
+    },
+    "style": {
+      "type": "string",
+      "title": "Cat style",
+      "description": "two-line: ears on a row above the face. one-line: one row; the ears become the brackets of the face.",
+      "default": "two-line",
+      "options": [
+        "one-line",
+        "two-line"
+      ]
+    },
+    "speedFastest": {
+      "type": "string",
+      "title": "Fastest speed (ms per column)",
+      "description": "The cat changes speed at random between the fastest and the slowest, holding each for a while. Smaller is faster.",
+      "default": "150",
+      "options": [
+        "150",
+        "300",
+        "450"
+      ]
+    },
+    "speedSlowest": {
+      "type": "string",
+      "title": "Slowest speed (ms per column)",
+      "description": "See the fastest speed. Larger is slower.",
+      "default": "450",
+      "options": [
+        "300",
+        "450",
+        "600",
+        "900"
+      ]
+    },
+    "beep": {
+      "type": "string",
+      "title": "Beep when a reply is done",
+      "description": "Plays the beep sequence after the AI finishes a reply normally (not after Esc, an error or a refusal). /cat off also silences it. off runs nothing.",
+      "default": "on",
+      "options": [
+        "on",
+        "off"
+      ]
+    },
+    "beepSequence": {
+      "type": "string",
+      "title": "Beep sequence",
+      "description": "Comma-separated Hz:ms notes; Hz 0 is a silent gap. Up to 12 notes, 10-1000 ms each, 37-32767 Hz. Default 880:100,1320:150 (two rising tones).",
+      "default": "880:100,1320:150"
+    },
+    "language": {
+      "type": "string",
+      "title": "Language",
+      "description": "Language of the cat's labels and /config titles. auto follows Claude Code's Language setting, then LANG / LC_ALL; anything not Traditional Chinese is English.",
+      "default": "auto",
+      "options": [
+        "auto",
+        "en",
+        "zh-TW"
+      ]
+    }
+  },
+  "keywords": [
+    "cat",
+    "ui",
+    "status",
+    "beep",
+    "zh-TW"
+  ]
+}
