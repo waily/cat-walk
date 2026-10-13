@@ -1,0 +1,14 @@
+{
+  "name": "cat-walk",
+  "description": "cat-walk: a text cat for the Claude Code prompt, with a beep when the reply is done.",
+  "owner": {
+    "name": "Waily Yang"
+  },
+  "plugins": [
+    {
+      "name": "cat-walk",
+      "source": "./",
+      "description": "A text cat walks, sleeps and gets dizzy above the prompt while you wait, and beeps when the AI's reply is done."
+    }
+  ]
+}
